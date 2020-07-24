@@ -1,0 +1,52 @@
+body {
+    padding: 100px;
+}
+
+.container {
+
+    padding: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.submitArea {
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 15px;
+
+    -webkit-box-shadow: 4px 12px 15px 3px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 4px 12px 15px 3px rgba(0, 0, 0, 0.58);
+    box-shadow: 4px 12px 15px 3px rgba(0, 0, 0, 0.58);
+}
+
+#club {
+    text-shadow: 5px 5px 1px rgba(154, 80, 216, 0.59);
+    color: darkgreen;
+}
+
+#transetionArea {
+    display: none;
+}
+
+.diposit {
+    margin: 0px 10px;
+    background-color: #5F45C3;
+}
+
+.withdraw {
+    background-color: #E98F73;
+}
+
+.balance {
+    background-color: #E79C0A;
+}
+
+.stats {
+    margin: 0px 20px;
+    padding:25px 20px;
+    border-radius: 10px;
+    color: white;
+
+}

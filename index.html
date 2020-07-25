@@ -2,91 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2k14 Friend Club</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2k14 Friend Club</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div id="loginarea" class="container">
-        <h1>Weclcome to <span id="club">"2k14 Friend Club"</span> Bank</h1>
+  <div id="loginarea" class="container">
+    <h1>Weclcome to <span id="club">"2k14 Friend Club"</span> Bank</h1>
+    <div class="submitArea">
+      <h4>Login</h4>
+      <input type="text" class="form-control" placeholder="Enter your email">
+      <br>
+      <input type="password" class="form-control" placeholder="Password">
+      <br>
+      <button id="login" class="btn btn-success">Enter</button>
+
+    </div>
+  </div>
+  <!---------dioposit , withdraw, balance -->
+  <div id="transetionArea">
+    <div class="row">
+      <div class="col-md-4 ">
+        <div class="diposit stats">
+          <h5>Diposit</h5>
+          <h2>$ <span id="dipostiadd">00</span></h2>
+        </div>
+      </div>
+      <!----withdraw-->
+      <div class="col-md-4 ">
+        <div class="withdraw stats">
+          <h5>Withdraw</h5>
+          <h2>$00</h2>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="balance  stats">
+          <h5>Balance</h5>
+          <h2>$ <span id="balanceadd">1985</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
         <div class="submitArea">
-            <h4>Login</h4>
-            <input type="text" class="form-control" placeholder="Enter your email">
-            <br>
-            <input type="password" class="form-control" placeholder="Password">
-            <br>
-            <button id="login" class="btn btn-success">Enter</button>
+          <h4>Diposit</h4><br>
 
+          <input id="dipositAmount" type="text" class="form-control" placeholder="$ diposit your dolar">
+          <br>
+          <button id="diposit" class="btn-success">Diposit</button>
         </div>
+      </div>
+      <div class="col-md-6">
+        <div class="submitArea">
+          <h4>withdraw</h4><br>
+          <input id="withdrawAmount" type="text" class="form-control" placeholder="$ Withdraw your dolar">
+          <br>
+          <button id="withdrawbtn" class="btn-success">
+            Withdraw
+          </button>
+        </div>
+      </div>
     </div>
-    <div id="transetionArea">
-        <div class="row">
-            <div class="col-md-4 ">
-                <div class="diposit stats">
-                    <h5>Diposit</h5>
-                    <h2>$00</h2>
-                </div>
-            </div>
-            <div class="col-md-4 ">
-                <div class="withdraw stats">
-                    <h5>Withdraw</h5>
-                    <h2>$00</h2>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="balance  stats">
-                    <h5>Balance</h5>
-                    <h2>$00</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="submitArea">
-                    <h4>Diposit</h4><br>
+  </div>
 
-                    <input id="dipositAmount" type="text" class="form-control" placeholder="$ diposit your dolar">
-                    <br>
-                    <button id="diposit" class="btn-success">Diposit</button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="submitArea">
-                    <h4>withdraw</h4><br>
-                    <input id="withdrawAmount" type="text" class="form-control" placeholder="$ Withdraw your dolar">
-                    <br>
-                    <button id="withdraw" class="btn-success">
-                        Withdraw
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        // login btn login handaler even 
-        const loginBtn = document.getElementById('login');
-        loginBtn.addEventListener('click', function () {
-            const loginarea = document.getElementById('loginarea');
-            loginarea.style.display = 'none';
-            const transetionArea = document.getElementById('transetionArea');
-            transetionArea.style.display = 'block';
-
-        })
-        /// diposit and withdraw section 
-        const dipositBtn = document.getElementById('diposit');
-        dipositBtn.addEventListener('click', function(){
-            const dipositAmount =document.getElementById('dipositAmount').value;
-            const dipositnumber = parseFloat(dipositAmount);
-
-        })
-
-ami 
-        
-    </script>
+  <script src="java.js"></script>
 </body>
 
 </html>

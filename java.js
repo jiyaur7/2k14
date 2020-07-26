@@ -32,7 +32,7 @@
 
         beautyfyTex('dipostiadd', dipositnumbber);
         beautyfyTex('balanceadd', dipositnumbber);
-        beautyfyTex('balanceadd', withdrawNumber);
+
         document.getElementById('dipositAmount').value = '';
 
     })

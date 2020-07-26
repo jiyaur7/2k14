@@ -13,6 +13,8 @@
 
         const dipositAmount = document.getElementById('dipositAmount').value;
         const dipositnumbber = parseFloat(dipositAmount);
+        const dipositAmoun = getInputNumber("dipositAmount");
+
 
         // --------diposit--------------
 
@@ -30,9 +32,29 @@
 
         beautyfyTex('dipostiadd', dipositnumbber);
         beautyfyTex('balanceadd', dipositnumbber);
+        beautyfyTex('balanceadd', withdrawNumber);
         document.getElementById('dipositAmount').value = '';
 
     })
+    ///-------withdraw------
+    const withdrawbtn = document.getElementById('withdrawbtn');
+    withdrawbtn.addEventListener('click', function () {
+        const withdrawNumber = getInputNumber("withdrawAmount");
+
+        beautyfyTex('currentWithdraw', withdrawNumber);
+        beautyfyTex('balanceadd', -1 * withdrawNumber);
+        document.getElementById('withdrawAmount').value = '';
+
+
+
+    })
+
+    function getInputNumber(id) {
+        const withdrawamount = document.getElementById(id).value;
+        const withdrawf = parseFloat(withdrawamount);
+        return withdrawf;
+    }
+
 
     function beautyfyTex(id, dipositnumbber) {
         const balance = document.getElementById(id).innerText;
@@ -40,10 +62,3 @@
         const totalbalance = dipositnumbber + balancef;
         document.getElementById(id).innerText = totalbalance;
     }
-    ///-------withdraw------
-    const withdrawbtn = document.getElementById('withdrawbtn');
-    withdrawbtn.addEventListener('click', function () {
-        const withdrawamount = document.getElementById("withdrawAmount").value;
-        const withdrawf = parseFloat(withdrawamount);
-
-    })
